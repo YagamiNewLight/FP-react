@@ -23,7 +23,7 @@ class App extends Component {
   }
   getRoutes(routes){
     return routes.map((route,index) => {
-      return Rainbow(
+      return (
         <div className="routesWrapper" key={index}>
           <Route {...route}/>
         </div>
@@ -33,7 +33,7 @@ class App extends Component {
   wrapApp(route){
     return (
       <div className="App">
-        <Navbar />
+        <Navbar xx="qq"/>
         {route}
       </div>
     )
