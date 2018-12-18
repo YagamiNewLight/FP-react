@@ -4,6 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import Rainbow from './hoc/Rainbow'
 
 class App extends Component {
   state = {
@@ -22,9 +23,9 @@ class App extends Component {
   }
   getRoutes(routes){
     return routes.map((route,index) => {
-      return (
+      return Rainbow(
         <div className="routesWrapper" key={index}>
-            <Route {...route}/>
+          <Route {...route}/>
         </div>
       )
     })
