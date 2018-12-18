@@ -21,9 +21,11 @@ class App extends Component {
     )
   }
   getRoutes(routes){
-    return routes.map(route => {
+    return routes.map((route,index) => {
       return (
-         <Route path={route.path || '/'} component={route.component}/>
+        <div className="routesWrapper" key={index}>
+          <Route path={route.path || '/'} component={route.component}/>
+        </div>
       )
     })
   }
@@ -31,8 +33,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-          {route}
-        </div>
+        {route}
+      </div>
     )
   }
   pipe(...fns){
