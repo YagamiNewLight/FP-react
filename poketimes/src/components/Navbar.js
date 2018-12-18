@@ -3,7 +3,6 @@ import { Link, NavLink, withRouter } from 'react-router-dom'
 import Rainbow from '../hoc/Rainbow'
 
 const Navbar = (props) => {
-  console.log(props)
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
@@ -18,4 +17,4 @@ const Navbar = (props) => {
   )
 }
 
-export default Rainbow(withRouter(Navbar))
+export default Rainbow(Navbar)
