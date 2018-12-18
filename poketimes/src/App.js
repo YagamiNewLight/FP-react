@@ -8,7 +8,7 @@ import Contact from './components/Contact'
 class App extends Component {
   state = {
     routes:[
-      {path:'/',component:Home},
+      {path:'/',component:Home,exact:true},
       {path:'/about',component:About},
       {path:'/contact',component:Contact},
     ]
@@ -24,7 +24,7 @@ class App extends Component {
     return routes.map((route,index) => {
       return (
         <div className="routesWrapper" key={index}>
-          <Route path={route.path || '/'} component={route.component}/>
+            <Route {...route}/>
         </div>
       )
     })
